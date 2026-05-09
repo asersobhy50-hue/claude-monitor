@@ -15,7 +15,7 @@
 
 👉 **[اضغط هنا لتحميل آخر إصدار من البرنامج (للويندوز)](https://github.com/asersobhy50-hue/claude-monitor/releases/latest)**
 
-*(قم بتحميل ملف `Claude.Monitor.Setup.1.0.0.exe` واضغط عليه لتثبيته كأي برنامج عادي).*
+*(قم بتحميل ملف `Claude.Monitor.Setup.exe` واضغط عليه لتثبيته كأي برنامج عادي).*
 
 ## 🚀 كيفية التشغيل لمن يحمل الكود
 
