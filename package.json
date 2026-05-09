@@ -1,0 +1,58 @@
+{
+  "name": "claude-monitor",
+  "version": "1.0.0",
+  "description": "Claude Monitor - Real-time Claude Pro Usage Tracker",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win",
+    "build:mac": "electron-builder build --mac",
+    "build:all": "electron-builder build --win --mac"
+  },
+  "author": "Claude Monitor",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2",
+    "png-to-ico": "^3.0.1"
+  },
+  "build": {
+    "appId": "com.claude.monitor",
+    "productName": "Claude Monitor",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.png"
+    },
+    "mac": {
+      "target": {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      },
+      "icon": "assets/icon.png",
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "title": "Claude Monitor",
+      "contents": [
+        { "x": 130, "y": 220 },
+        { "x": 410, "y": 220, "type": "link", "path": "/Applications" }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "assets/**"
+    ]
+  }
+}
